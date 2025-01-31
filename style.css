@@ -207,7 +207,7 @@ body{
     animation-delay:-5s;
 }
 
-@keyframe rotate-border{
+@keyframes rotate-border{
     100%{
         transform: rotate(360deg);
     }
