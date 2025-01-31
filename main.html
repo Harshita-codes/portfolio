@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Harshita - Portfolio</title>
 </head>
 <body>
     <nav class="navbar">
-            <a href="#" class="logo">Harshita Jaiswal</a>
+            <span><a href="#" class="logo">Harshita Jaiswal</a></span>
             <ul>
                 <li class ="active"><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
@@ -20,11 +21,45 @@
                 <li><a href="#">Contact</a></li>
             </ul>
     </nav>
-        <section id="page1">
-        <div>
-         <h2>Frontend Developer</h2>
+
+    <div class="bars-animation">
+        <div class="bar" style="--i:6;" ></div>
+        <div class="bar" style="--i:5;"></div>
+        <div class="bar" style="--i:4;"></div>
+        <div class="bar" style="--i:3;"></div>
+        <div class="bar" style="--i:2;"></div>
+        <div class="bar" style="--i:1;"></div>
+    </div>
+
+    <section class="home">
+        <div class="home-info">
+            <h1>Harshita Jaiswal</h1>
+            <h2>I'm a 
+                <span style="--i:4;" data-text="Frontend Developer">Frontend Developer</span>
+                <span style="--i:3;" data-text="Competitive Programmer">Competitive Programmer</span>
+                <span style="--i:2;" data-text="Tech Community Lead">Tech Community Lead</span>
+                <span style="--i:1;" data-text="Public Speaker">Public Speaker</span>
+            </h2>
+            <p>I'm a Tech enthusiast and problem solver with a knack for programming languages and web technologies. Energized by hackathons and competitive coding, I thrive on tackling complex challenges and swiftly mastering new technologies.
+
+                With a proven track record in leadership, from orchestrating events to captivating audiences as a public speaker, I bring a unique blend of technical expertise and communication skills. Passionate about driving innovation and collaborating with forward-thinking professionals. Let’s connect and turn ideas into impactful solutions!.</p>
+                <div class="btn-sci">
+                    <a href="#" class="btn">Resume</a>
+                    <div  class="sci">
+                        <a href="#"><i class='bx bxl-github'></i></a>
+                        <a href="#"><i class='bx bxl-linkedin-square'></i></a> 
+                    </div>
+                </div>
         </div>
-    <img src="Harshitaimage.jpg" alt="Harshita Jaiswal" width="200" height="200">
-</section>
+
+        <div class="home-img">
+            <div class="img-box">
+                <div class="img-item">
+                    <img src="Harshita_photo.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
