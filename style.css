@@ -196,8 +196,8 @@ body{
 .home-img .img-box:after{
     content:'';
     position:absolute;
-    width:500px;
-    height:500px;
+    width: 33vw;
+    height:33vw;
     background: conic-gradient(transparent, transparent, transparent, #7cf03d);
     transform: rotate(0deg);
     animation: rotate-border 10s linear infinite;
@@ -396,12 +396,39 @@ body{
 .resume-list .resume-item{
     padding:3rem 2.5rem;
     border-radius:.8rem;
-    background:#1f242d;
+    background:#434952;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     display:flex;
-    height: calc((45rem - 2rem) / 2);
+    height: calc((25rem - 2rem) / 2);
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    gap:1rem;
+    cursor: pointer;
+    transition:.5s;
+    position:relative;
+    margin:0.5rem 1rem;
+}
+
+.skills.skills .resume-list{
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    height:auto;
+    overflow:visible;
+}
+
+.skills.skills .resume-item{
+    position:relative;
+    align-items:center;
+    height:auto;
+}
+
+.skills.skills .resume-item i{
+    font-size:8.5rem;
+    transition:.5s;
+}
+
+.skills.skills .resume-item:hover i{
+    color: #7cf03d;
 }
 
 
