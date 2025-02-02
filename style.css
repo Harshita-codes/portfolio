@@ -13,6 +13,7 @@
     opacity:0;
     animation:show-content 1.5s linear forwards;
     animation-delay: 1.2s;
+    background-color: #1f242d;
 }
 
 @keyframes show-content{
@@ -351,16 +352,36 @@ body{
     padding:.5rem 0;
 }
 
+.education-box{
+    margin-left:10%;
+}
+
+.heading{
+    color:#fff;
+    font-size: 40px;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 500;
+}
+
 .resume-list{
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap:2rem;
     height:45rem;
     overflow:auto;
+    color:#fff;
+    font-size: 25px;
+}
+
+.span{
+    color:#7cf03d;
 }
 
 .resume-list::-webkit-scrollbar{
     width:.7rem;
+    border: .2rem solid #7cf03d;
+    border-radius: .6rem;
 }
 
 .resume-list::-webkit-scrollbar-thumb{
