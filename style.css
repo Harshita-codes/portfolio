@@ -423,10 +423,10 @@ body {
     margin: 0.5rem 1rem;
 }
 
-.skills{
-    height:100vh;
-    width:100%;
-    padding-top:5%;
+.skills {
+    height: 100vh;
+    width: 100%;
+    padding-top: 5%;
 }
 
 .skills.skills .resume-list {
@@ -452,9 +452,9 @@ body {
 
 .projects {
     background: #1f242d;
-    width: 100%;
-    height: 100vh;
-    padding-top:1%;
+    /* width: 100%;
+    height: 100%; */
+    padding-top: 5%;
 }
 
 .projects h2 {
@@ -466,7 +466,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     gap: 2.5rem;
-    padding: 0 5%;
+    padding: 5% 5%;
 }
 
 .projects-container .projects-box {
@@ -476,20 +476,31 @@ body {
     overflow: hidden;
     display: flex;
     background: #434952;
-    padding-bottom: 5%;
+    /* padding-bottom: 5%; */
+    width: 25rem;
+    height: 30rem;
+    /* padding-left: 1rem; */
+    padding-right: 1rem;
+    padding-top: none;
+
 }
 
 .projects-box img {
-    width: 20px;
-    height: auto;
+    /* width: 20px;
+    height: auto; */
     transition: .5s ease;
+    object-fit: fill;
+
+    position: relative;
+    top: 10px;
+
 }
 
 .projects-box:hover img {
     transform: scale(1.1);
 }
 
-.project-box .project-layer {
+.project-box .projects-layer {
     position: relative;
     bottom: 0;
     left: 0;
@@ -506,7 +517,7 @@ body {
     transition: .5s ease;
 }
 
-.projects-box:hover .project-layer {
+.projects-box:hover .projects-layer {
     transform: translateY(100%);
 }
 
