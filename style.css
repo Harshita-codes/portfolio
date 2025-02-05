@@ -454,7 +454,7 @@ body {
     background: #1f242d;
     /* width: 100%;
     height: 100%; */
-    padding-top: 5%;
+    padding-top: 7%;
 }
 
 .projects h2 {
@@ -637,7 +637,7 @@ body {
     background: #434952;
     border: .15rem solid #7cf03d;
     border-radius: .6rem;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     color: #fff;
 
 }
@@ -656,6 +656,7 @@ body {
 .contact-box .btn {
     margin: 2rem 0 0;
     cursor: pointer;
+    height:3.2rem;
 }
 
 .contact-box i {
