@@ -677,3 +677,709 @@ body {
     height: 10rem;
     resize: none;
 }
+
+/* ============================================
+   COMPREHENSIVE RESPONSIVE CSS
+   Makes website responsive for all devices
+   WITHOUT modifying existing code
+   ============================================ */
+
+/* EXTRA LARGE SCREENS (Desktop - 1200px and above) */
+@media only screen and (min-width: 1200px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+/* LARGE SCREENS (Desktop - 992px to 1199px) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .navbar ul {
+        margin-right: 8%;
+    }
+    
+    .navbar .logo {
+        margin-left: 8%;
+    }
+    
+    .home {
+        padding: 60px 7% 0;
+        gap: 30px;
+    }
+    
+    .home-info h1 {
+        font-size: 45px;
+    }
+    
+    .home-info h2 {
+        font-size: 28px;
+    }
+    
+    .home-img .img-box {
+        width: 28vw;
+        height: 28vw;
+    }
+    
+    .home-img .img-box:before,
+    .home-img .img-box:after {
+        width: 29vw;
+        height: 29vw;
+    }
+    
+    .education-row .education-column {
+        flex: 0 0 35rem;
+    }
+    
+    .projects-container {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 5% 3%;
+    }
+    
+    .projects-container .projects-box {
+        width: 22rem;
+        height: 26rem;
+    }
+}
+
+/* MEDIUM SCREENS (Tablets - 768px to 991px) */
+@media only screen and (max-width: 991px) {
+    
+    /* Navbar adjustments */
+    .navbar ul {
+        margin-right: 5%;
+    }
+    
+    .navbar ul li {
+        margin: 12px;
+    }
+    
+    .navbar ul li a {
+        font-size: 20px;
+    }
+    
+    .navbar .logo {
+        margin-left: 5%;
+        font-size: 25px;
+    }
+    
+    /* Home section */
+    .home {
+        padding: 60px 5% 0;
+        gap: 30px;
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .home-info {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .home-info h1 {
+        font-size: 40px;
+    }
+    
+    .home-info h2 {
+        font-size: 24px;
+    }
+    
+    .home-info p {
+        font-size: 15px;
+        margin: 15px 0 20px;
+    }
+    
+    .home-img {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .home-img .img-box {
+        width: 25vw;
+        height: 25vw;
+    }
+    
+    .home-img .img-box:before,
+    .home-img .img-box:after {
+        width: 26vw;
+        height: 26vw;
+    }
+    
+    /* About section */
+    .about .education-row {
+        gap: 3rem;
+        justify-content: center;
+    }
+    
+    .education-row .education-column {
+        flex: 0 0 100%;
+        max-width: 35rem;
+    }
+    
+    .education-box {
+        margin-left: 5%;
+    }
+    
+    .education-column .title {
+        font-size: 30px;
+        margin-left: 1rem;
+    }
+    
+    /* Resume/Skills section */
+    .resume-list {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        height: auto;
+        overflow: visible;
+    }
+    
+    .skills.skills .resume-list {
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    }
+    
+    .skills.skills .resume-item i {
+        font-size: 6rem;
+    }
+    
+    /* Projects section */
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 5% 3%;
+        gap: 2rem;
+    }
+    
+    .projects-container .projects-box {
+        width: 100%;
+        height: 25rem;
+    }
+    
+    .projects h2 {
+        padding: 0 5%;
+    }
+    
+    .projects-layer h4 {
+        font-size: 1.5rem;
+    }
+    
+    .projects-layer p {
+        font-size: 1rem;
+    }
+    
+    /* Contact section */
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 5%;
+    }
+    
+    .contact-box {
+        margin-left: 0;
+    }
+    
+    .contact-box h2 {
+        font-size: 32px;
+    }
+    
+    .contact-box h3 {
+        font-size: 25px;
+    }
+    
+    .contact-box h2 {
+        text-align: center;
+    }
+    
+    .contact-box .field-box {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-detail {
+        margin: 1.5rem 0;
+    }
+    
+    .details {
+        margin-left: 0;
+        flex-direction: column;
+    }
+}
+
+/* SMALL SCREENS (Mobile - 480px to 767px) */
+@media only screen and (max-width: 767px) {
+    
+    /* General */
+    * {
+        scroll-behavior: smooth;
+    }
+    
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    /* Navbar */
+    .navbar {
+        padding: 10px 2%;
+    }
+    
+    .navbar .logo {
+        font-size: 20px;
+        margin-left: 2%;
+    }
+    
+    .navbar ul {
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+        background: #1f242d;
+        flex-direction: column;
+        text-align: center;
+        display: none;
+    }
+    
+    .navbar ul li {
+        margin: 10px 0;
+    }
+    
+    .navbar ul li a {
+        font-size: 18px;
+    }
+    
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    
+    /* Home section */
+    .home {
+        padding: 80px 5% 20px;
+        gap: 20px;
+        height: auto;
+    }
+    
+    .home-info {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .home-info h1 {
+        font-size: 32px;
+    }
+    
+    .home-info h2 {
+        font-size: 20px;
+    }
+    
+    .home-info p {
+        font-size: 14px;
+        margin: 12px 0 15px;
+    }
+    
+    .home-info .btn-sci {
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .home-info .btn-sci .sci {
+        margin-left: 0;
+    }
+    
+    .home-img {
+        width: 100%;
+    }
+    
+    .home-img .img-box {
+        width: 50vw;
+        height: 50vw;
+        max-width: 250px;
+        max-height: 250px;
+    }
+    
+    .home-img .img-box:before,
+    .home-img .img-box:after {
+        width: 51vw;
+        height: 51vw;
+        max-width: 260px;
+        max-height: 260px;
+    }
+    
+    /* About section */
+    .about {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .about .education-row {
+        gap: 2rem;
+    }
+    
+    .education-row .education-column {
+        flex: 0 0 100%;
+    }
+    
+    .education-column .title {
+        font-size: 24px;
+        margin: 0 0 1rem 1rem;
+    }
+    
+    .education-box {
+        margin-left: 3%;
+    }
+    
+    .education-content .content {
+        padding: 1rem;
+    }
+    
+    .education-content .content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .education-content .content p {
+        font-size: 14px;
+    }
+    
+    /* Skills section */
+    .skills {
+        height: auto;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .heading {
+        font-size: 28px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .resume-list {
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+        height: auto;
+        overflow: visible;
+        gap: 1.5rem;
+    }
+    
+    .resume-list .resume-item {
+        padding: 2rem 1.5rem;
+        height: auto;
+        margin: 0;
+    }
+    
+    .skills .resume-item i {
+        font-size: 5rem;
+    }
+    
+    /* Projects section */
+    .projects {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .projects h2 {
+        margin-bottom: 2rem;
+        padding: 0 5%;
+        font-size: 28px;
+    }
+    
+    .projects-container {
+        grid-template-columns: 1fr;
+        padding: 0 5%;
+        gap: 2rem;
+    }
+    
+    .projects-container .projects-box {
+        width: 100%;
+        height: 22rem;
+    }
+    
+    .projects-layer h4 {
+        font-size: 1.3rem;
+    }
+    
+    .projects-layer p {
+        font-size: 0.9rem;
+    }
+    
+    .projects-layer a {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    
+    .projects-layer a i {
+        font-size: 1.2rem;
+    }
+    
+    /* Contact section */
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 5%;
+    }
+    
+    .contact-box {
+        margin-left: 0;
+    }
+    
+    .contact-box h2 {
+        font-size: 28px;
+        text-align: center;
+    }
+    
+    .contact-box h3 {
+        font-size: 22px;
+    }
+    
+    .contact-box p {
+        font-size: 16px;
+    }
+    
+    .contact-box form {
+        padding: 2rem 1.5rem;
+    }
+    
+    .contact-box .field-box {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .contact-box .field-box input,
+    .contact-box .field-box textarea {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+    
+    .contact-box .field-box textarea {
+        height: 12rem;
+    }
+    
+    .contact-box .btn {
+        padding: 10px 25px;
+        font-size: 16px;
+    }
+    
+    .contact-detail {
+        margin: 1rem 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .contact-detail i {
+        font-size: 2.5rem;
+        padding: 1rem;
+        margin-bottom: 0.5rem;
+        margin-right: 0;
+    }
+    
+    .details {
+        margin-left: 0;
+    }
+    
+    .contact-details p {
+        font-size: 15px;
+    }
+    
+    hr {
+        margin: 2rem 0;
+    }
+}
+
+/* EXTRA SMALL SCREENS (Mobile - Below 480px) */
+@media only screen and (max-width: 479px) {
+    
+    /* Navbar */
+    .navbar {
+        padding: 8px 2%;
+    }
+    
+    .navbar .logo {
+        font-size: 18px;
+    }
+    
+    .navbar ul li a {
+        font-size: 16px;
+    }
+    
+    /* Home section */
+    .home {
+        padding: 70px 3% 15px;
+    }
+    
+    .home-info h1 {
+        font-size: 28px;
+    }
+    
+    .home-info h2 {
+        font-size: 18px;
+    }
+    
+    .home-info p {
+        font-size: 13px;
+        margin: 10px 0 12px;
+    }
+    
+    .btn {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+    
+    .home-img .img-box {
+        width: 60vw;
+        height: 60vw;
+        max-width: 200px;
+        max-height: 200px;
+    }
+    
+    .home-img .img-box:before,
+    .home-img .img-box:after {
+        width: 61vw;
+        height: 61vw;
+        max-width: 210px;
+        max-height: 210px;
+    }
+    
+    /* About section */
+    .education-column .title {
+        font-size: 22px;
+        margin: 0 0 1rem 0.5rem;
+    }
+    
+    .education-box {
+        margin-left: 1%;
+    }
+    
+    .education-content .content h3 {
+        font-size: 1.15rem;
+    }
+    
+    .education-content .content p {
+        font-size: 13px;
+    }
+    
+    /* Skills section */
+    .heading {
+        font-size: 24px;
+    }
+    
+    .resume-list {
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        gap: 1rem;
+    }
+    
+    .resume-list .resume-item {
+        padding: 1.5rem 1rem;
+    }
+    
+    .skills .resume-item i {
+        font-size: 4rem;
+    }
+    
+    /* Projects section */
+    .projects h2 {
+        font-size: 24px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .projects-container {
+        padding: 0 3%;
+        gap: 1.5rem;
+    }
+    
+    .projects-container .projects-box {
+        height: 20rem;
+    }
+    
+    .projects-layer h4 {
+        font-size: 1.1rem;
+    }
+    
+    .projects-layer p {
+        font-size: 0.85rem;
+    }
+    
+    /* Contact section */
+    .contact-container {
+        padding: 0 3%;
+    }
+    
+    .contact-box h2 {
+        font-size: 24px;
+    }
+    
+    .contact-box h3 {
+        font-size: 20px;
+    }
+    
+    .contact-box p {
+        font-size: 15px;
+    }
+    
+    .contact-box form {
+        padding: 1.5rem 1rem;
+    }
+    
+    .contact-box .field-box input,
+    .contact-box .field-box textarea {
+        padding: 0.6rem;
+        font-size: 14px;
+    }
+    
+    .field-box #messageContent {
+        height: 10rem;
+    }
+}
+      /* Reduce font size for smaller screens */
+      font-size: 1.8rem;
+    }
+    .home-info h2 {
+      /* Reduce font size for smaller screens */
+      font-size: 1.2rem;
+    }
+    .home-info p {
+      /* Reduce font size for smaller screens */
+      font-size: 0.8rem;
+    }
+  }
+  /* style.css */
+
+/* Add this to the existing CSS file */
+
+.projects-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .projects-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .projects-box .projects-layer {
+    width: 70%;
+    padding: 1rem;
+  }
+  
+  /* Media queries for mobile responsiveness */
+  
+  /* For screens with a maximum width of 768px (tablets and smaller) */
+  @media only screen and (max-width: 768px) {
+    .projects-box {
+      flex-direction: column;
+    }
+    .projects-box img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .projects-box .projects-layer {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+  
+  /* For screens with a maximum width of 480px (mobile phones) */
+  @media only screen and (max-width: 480px) {
+    .projects-box img {
+      height: 150px;
+    }
+  }
+  /* style.css */
+
