@@ -1353,46 +1353,65 @@ body {
       font-size: 0.8rem;
     }
 
-.projects-box {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  
-  .projects-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .projects-box .projects-layer {
-    width: 70%;
-    padding: 1rem;
-  }
-  
-  /* Media queries for mobile responsiveness */
-  
-  /* For screens with a maximum width of 768px (tablets and smaller) */
-  @media only screen and (max-width: 768px) {
-    .projects-box {
-      flex-direction: column;
-    }
-    .projects-box img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    .projects-box .projects-layer {
-      width: 100%;
-      padding: 1rem;
-    }
-  }
-  
-  /* For screens with a maximum width of 480px (mobile phones) */
-  @media only screen and (max-width: 480px) {
-    .projects-box img {
-      height: 150px;
-    }
-  }
-  /* style.css */
+/* Ensure project cards keep the intended overlay behavior and stacking
+     - keep .projects-box positioned relative so the absolutely-positioned overlay works
+     - use z-index to keep overlay above the image
+     - use a sensible min-height for desktop and allow auto height on smaller screens
+*/
+.projects-container .projects-box {
+        display: block;
+        position: relative;
+        border-radius: 2rem;
+        overflow: hidden;
+        width: 100%;
+        min-height: 26rem;
+}
+
+.projects-container .projects-box img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        z-index: 1;
+}
+
+.projects-container .projects-box .projects-layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+}
+
+/* Responsive adjustments: stack content on smaller screens and reduce heights */
+@media only screen and (max-width: 991px) {
+        .projects-container {
+                grid-template-columns: repeat(2, 1fr);
+        }
+        .projects-container .projects-box {
+                min-height: 22.5rem;
+        }
+}
+
+@media only screen and (max-width: 767px) {
+        .projects-container {
+                grid-template-columns: 1fr;
+                padding: 0 5%;
+        }
+        .projects-container .projects-box {
+                min-height: 20rem;
+                height: auto;
+        }
+        .projects-container .projects-box img {
+                height: 200px;
+        }
+}
+
+@media only screen and (max-width: 479px) {
+        .projects-container .projects-box img {
+                height: 150px;
+        }
+}
 
