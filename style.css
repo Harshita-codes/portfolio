@@ -515,7 +515,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 0;
+    padding: 2rem;
+    gap: 1rem;
     text-align: center;
     border-radius: 2rem;
     box-sizing: border-box;
@@ -524,6 +525,7 @@ body {
     transform: translateY(100%);
     /* Moves content down */
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    overflow: hidden;
 }
 
 .projects-box:hover .projects-layer {
@@ -534,17 +536,20 @@ body {
 }
 
 .projects-layer h4 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #7cf03d;
-    margin-bottom: 10px;
+    margin: 0;
+    padding: 0;
 }
 
 .projects-layer p {
-    font-size: 1.3rem;
-    /* margin: .3rem 0 1rem; */
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
     color: #fff;
     text-align: center;
     opacity: 0.9;
+    line-height: 1.4;
 }
 
 .projects-layer a {
@@ -1335,6 +1340,7 @@ body {
         height: 10rem;
     }
 }
+    .home-info h1 {
       /* Reduce font size for smaller screens */
       font-size: 1.8rem;
     }
@@ -1346,10 +1352,6 @@ body {
       /* Reduce font size for smaller screens */
       font-size: 0.8rem;
     }
-  }
-  /* style.css */
-
-/* Add this to the existing CSS file */
 
 .projects-box {
     display: flex;
